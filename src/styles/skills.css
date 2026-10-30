@@ -1,0 +1,55 @@
+/* ── Étape 6 : Compétences techniques ─────────────────────────────── */
+.sk { padding-block: 56px 32px; }
+.sk-legend { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; margin: -8px 0 22px; color: var(--text-2); font-size: 15px; }
+.sk-legend strong { color: var(--ink); }
+.sk-legend-keys { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13.5px; color: var(--muted); }
+
+.sk-main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+.sk-others { columns: 3 300px; column-gap: 16px; }
+.sk-others .sk-group { break-inside: avoid; margin-bottom: 16px; }
+
+.sk-group { --tc: var(--primary); display: flex; flex-direction: column; gap: 12px; padding: 20px 20px 16px; border-radius: 18px; border: 1px solid var(--line); background: var(--surface); }
+.sk-group.is-main { border-top: 3px solid var(--tc); }
+.sk-group.tone-ai { --tc: var(--ai-dot); }
+.sk-group.tone-devops { --tc: #6a5cff; }
+.sk-head { display: flex; align-items: center; gap: 10px; }
+.sk-icon { width: 34px; height: 34px; flex-shrink: 0; display: grid; place-items: center; border-radius: 10px; color: var(--tc); background: color-mix(in srgb, var(--tc) 12%, transparent); }
+:root[data-theme="dark"] .sk-icon { color: color-mix(in srgb, var(--tc) 65%, white); }
+.sk-title { font-size: 17px; font-weight: 700; }
+.sk-note { margin-left: auto; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 99px; color: var(--muted); background: var(--surface-2); }
+
+.sk-list { display: flex; flex-direction: column; }
+.sk-item { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 8px 0; border-top: 1px solid var(--line); }
+.sk-item:first-child { border-top: 0; }
+.sk-name { color: var(--ink); font-size: 15px; font-weight: 500; }
+.sk-proofs { display: flex; flex-wrap: wrap; gap: 5px; }
+.sk-proof { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 99px; font-size: 12px; font-weight: 600; line-height: 1.5; border: 1px solid transparent; white-space: nowrap; }
+.sk-proof.is-stage { color: var(--link); background: var(--primary-soft); border-color: color-mix(in srgb, var(--primary) 25%, transparent); }
+.sk-proof.is-projet { color: var(--text-2); background: var(--surface-2); border-color: var(--line); }
+a.sk-proof:hover { border-color: currentColor; }
+
+@media (max-width: 860px) {
+  .sk-main { grid-template-columns: 1fr; }
+}
+
+/* ── Étape 7 : Skills (savoir-être) ───────────────────────────────── */
+.soft { padding-block: 40px 32px; }
+.soft-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+.soft-card { grid-column: span 2; display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 18px; border: 1px solid var(--line); background: var(--surface); transition: border-color .2s ease, box-shadow .2s ease; }
+.soft-card:nth-child(4) { grid-column: 2 / span 2; }
+.soft-card:hover { border-color: color-mix(in srgb, var(--primary) 35%, var(--line)); box-shadow: var(--shadow-md); }
+.soft-head { display: flex; align-items: center; justify-content: space-between; }
+.soft-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; color: var(--link); background: var(--primary-soft); }
+.soft-num { font-family: var(--f-mono); font-size: 13px; color: var(--faint); }
+.soft-title { font-size: 19px; font-weight: 700; margin-top: 4px; }
+.soft-text { color: var(--text); line-height: 1.65; flex-grow: 1; }
+.soft-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); padding-top: 10px; border-top: 1px solid var(--line); }
+
+@media (max-width: 960px) {
+  .soft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .soft-card, .soft-card:nth-child(4) { grid-column: auto; }
+  .soft-card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .soft-grid { grid-template-columns: 1fr; }
+}

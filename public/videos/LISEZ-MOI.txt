@@ -1,0 +1,10 @@
+Démos vidéo — copiez vos fichiers ICI avec exactement ces noms (mêmes noms que la version 9) :
+
+  chu.mp4                  → Stage CHU Mohammed VI
+  termcopilot.mp4          → TermCopilot
+  churn.mp4                → Prédiction du churn
+  assistant-rapports.mp4   → Assistant rapports de stage & PFE
+
+Optionnel : une image d'aperçu avec le même nom en .jpg (ex. chu.jpg).
+Format conseillé : MP4 (H.264), idéalement moins de 30 Mo.
+Pas besoin de toucher au code : la vidéo apparaît toute seule si le fichier existe.

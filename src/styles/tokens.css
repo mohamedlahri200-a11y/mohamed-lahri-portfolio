@@ -1,0 +1,82 @@
+/* ── Jetons de design « 2027 » : thème clair (défaut) et thème sombre ───── */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f4f5f7;
+  --surface: #ffffff;
+  --surface-2: #f4f5f7;
+  --surface-3: #eceef2;
+  --line: #e3e6eb;
+  --line-strong: #d0d5dd;
+  --ink: #0b0f17;
+  --text: #3d4656;
+  --text-2: #4a5466;
+  --muted: #5b6475;
+  --faint: #8a93a3;
+  --primary: #4338ca;
+  --primary-hover: #3730a3;
+  --primary-ink: #ffffff;
+  --primary-soft: #eef0ff;
+  --link: #4338ca;
+  --ai: #0f766e;
+  --ai-soft: #e7f8f4;
+  --ai-dot: #14b8a6;
+  --strong-bg: #0b0f17;
+  --strong-ink: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --overlay: rgba(11, 15, 23, 0.55);
+  --shadow-sm: 0 1px 2px rgba(11, 15, 23, 0.06);
+  --shadow-md: 0 28px 56px -32px rgba(11, 15, 23, 0.38);
+  --focus: #4338ca;
+
+  --f-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r-sm: 10px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --maxw: 1240px;
+  --nav-h: 72px;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #07090f;
+  --bg-alt: #0b0e16;
+  --surface: #0f131c;
+  --surface-2: #141924;
+  --surface-3: #1a2030;
+  --line: #1f2635;
+  --line-strong: #2c3547;
+  --ink: #eef1f6;
+  --text: #c6ccd8;
+  --text-2: #a9b1c0;
+  --muted: #8f99aa;
+  --faint: #6f7a8d;
+  --primary: #6366f1;
+  --primary-hover: #818cf8;
+  --primary-ink: #ffffff;
+  --primary-soft: #1b1d45;
+  --link: #a5b4fc;
+  --ai: #5eead4;
+  --ai-soft: #0d2a28;
+  --ai-dot: #14b8a6;
+  --strong-bg: #eef1f6;
+  --strong-ink: #0b0f17;
+  --nav-bg: rgba(7, 9, 15, 0.8);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 28px 56px -30px rgba(0, 0, 0, 0.85);
+  --focus: #a5b4fc;
+  color-scheme: dark;
+}
+
+/* Sans JavaScript : suivre le thème du système */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #07090f; --bg-alt: #0b0e16; --surface: #0f131c; --surface-2: #141924; --surface-3: #1a2030;
+    --line: #1f2635; --line-strong: #2c3547; --ink: #eef1f6; --text: #c6ccd8; --text-2: #a9b1c0;
+    --muted: #8f99aa; --faint: #6f7a8d; --primary: #6366f1; --primary-soft: #1b1d45; --link: #a5b4fc;
+    --strong-bg: #eef1f6; --strong-ink: #0b0f17; --nav-bg: rgba(7, 9, 15, 0.8);
+    --ai: #5eead4; --ai-soft: #0d2a28; color-scheme: dark;
+  }
+}
